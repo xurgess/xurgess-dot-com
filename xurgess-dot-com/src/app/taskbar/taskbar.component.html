@@ -1,0 +1,9 @@
+<div class="taskbar">
+    @for (item of taskbarItems; track item) {
+        <div class="taskbar-item" (click)="onTaskClick(item)">
+            <i [class]="item.icon"></i>
+            <span>{{ item.label }}</span>
+          </div>
+    }
+  </div>
+  
