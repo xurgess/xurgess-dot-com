@@ -53,6 +53,10 @@ import {
   ViewContainerRef,
   ViewEncapsulation$1,
   XSS_SECURITY_URL,
+  __async,
+  __objRest,
+  __spreadProps,
+  __spreadValues,
   _global,
   _sanitizeHtml,
   _sanitizeUrl,
@@ -106,13 +110,7 @@ import {
   ɵɵinject,
   ɵɵinjectAttribute,
   ɵɵstyleProp
-} from "./chunk-GKAWBWOM.js";
-import {
-  __async,
-  __objRest,
-  __spreadProps,
-  __spreadValues
-} from "./chunk-X6JV76XL.js";
+} from "./chunk-5FUJWLSI.js";
 
 // node_modules/@angular/common/fesm2022/common.mjs
 var _DOM = null;
@@ -9104,4 +9102,4 @@ export {
    * License: MIT
    *)
 */
-//# sourceMappingURL=chunk-24B7FNEA.js.map
+//# sourceMappingURL=chunk-L6VIMCJS.js.map
