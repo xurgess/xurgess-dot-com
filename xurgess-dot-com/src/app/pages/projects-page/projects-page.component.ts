@@ -14,16 +14,10 @@ export class ProjectsPageComponent {
   projects = [
     {
       id: 1,
-      title: 'Project Alpha',
+      title: 'Lunar Lander',
       description: 'A revolutionary AI-driven platform.',
       imageUrl: 'assets/images/zmirk.jpg',
-    },
-    {
-      id: 2,
-      title: 'Project Beta',
-      description: 'Next-gen cloud security infrastructure.',
-      imageUrl: 'assets/images/zmirk.jpg',
-    },
+    }
   ];
 
   constructor(private router: Router) {}

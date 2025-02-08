@@ -3,6 +3,9 @@
   max-width: 400px;
   transition: transform 0.2s ease-in-out;
   
+  /* Replace the solid green with a gradient */
+  background: linear-gradient(135deg, #4caf50 0%, #1d381e 100%);
+  
   &:hover {
     transform: scale(1.02);
   }
