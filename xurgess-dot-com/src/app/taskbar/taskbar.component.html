@@ -1,8 +1,29 @@
-<div class="taskbar">
-  @for (item of taskbarItems; track item) {
-      <div class="taskbar-item" (click)="onTaskClick(item)">
-          <i [class]="item.icon"></i>
-          <span>{{ item.label }}</span>
-        </div>
-  }
-</div>
+<mat-sidenav-container>
+  <!-- Sidenav Menu -->
+  <mat-sidenav #sidenav mode="over" (closedStart)="sidenav.close()">
+    <mat-nav-list >
+      <div class="flex flex-row justify-center items-center gap-2 p-1.5">
+      @for (item of taskbarItems; track item) {
+        <button mat-button (click)="onTaskClick(item); sidenav.close()">
+          <mat-icon>{{ item.icon }}</mat-icon>
+          {{ item.label }}
+        </button>
+      }
+    </div>
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <!-- Toolbar -->
+  <mat-toolbar>
+    <!-- Menu Button -->
+    <button mat-icon-button (click)="sidenav.open()" aria-label="Open menu">
+      <mat-icon>menu</mat-icon>
+    </button>
+
+    <!-- Spacer to push title to the right -->
+    <span class="spacer"></span>
+
+    <!-- App Title -->
+    <span>XurgessDotCom</span>
+  </mat-toolbar>
+</mat-sidenav-container>

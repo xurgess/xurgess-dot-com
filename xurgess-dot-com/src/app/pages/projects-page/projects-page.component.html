@@ -1,1 +1,18 @@
-<p>projects-page works!</p>
+<div class="flex flex-row justify-center items-center gap-2 p-1.5">
+  @for (project of projects; track project) {
+    <mat-card class="project-card" (click)="navigateToProject(project.id)">
+      <mat-card-header>
+        <mat-card-title>{{ project.title }}</mat-card-title>
+      </mat-card-header>
+      <img mat-card-image [src]="project.imageUrl" alt="Project Image" />
+      <mat-card-content>
+        <p>{{ project.description }}</p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button (click)="navigateToProject(project.id, $event)">
+          View Project
+        </button>
+      </mat-card-actions>
+    </mat-card>
+  }
+</div>

@@ -7,7 +7,7 @@ import { TaskbarComponent } from './taskbar/taskbar.component';
   standalone: true,
   imports: [RouterOutlet, TaskbarComponent],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrl: './app.component.css',
 })
 export class AppComponent {
   title = 'xurgess-dot-com';

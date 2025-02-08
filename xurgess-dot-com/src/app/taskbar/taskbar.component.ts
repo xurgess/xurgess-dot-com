@@ -1,22 +1,40 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatListModule } from '@angular/material/list';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+
+interface TaskbarItem {
+  label: string;
+  icon: string;
+  path: string;
+}
+
 @Component({
   selector: 'app-taskbar',
   standalone: true,
-  imports: [],
+  imports: [
+    MatToolbarModule,
+    MatIconModule,
+    MatButtonModule,
+    MatSidenavModule,
+    MatListModule,
+  ],
   templateUrl: './taskbar.component.html',
   styleUrls: ['./taskbar.component.scss'],
 })
 export class TaskbarComponent {
-  taskbarItems = [
-    { label: 'Home', icon: 'fas fa-home', path: '/' },
-    { label: 'Projects', icon: 'fas fa-cog', path: '/projects' },
+  taskbarItems: TaskbarItem[] = [
+    { label: 'Home', icon: 'home', path: '/' },
+    { label: 'Projects', icon: 'build', path: '/projects' },
   ];
 
   constructor(private router: Router) {}
 
-  onTaskClick(item: any): void {
+  onTaskClick(item: TaskbarItem): void {
     if (item.path) {
       this.router.navigate([item.path]);
     } else {
