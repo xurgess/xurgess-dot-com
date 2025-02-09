@@ -29,6 +29,7 @@ export class TaskbarComponent {
   taskbarItems: TaskbarItem[] = [
     { label: 'Home', icon: 'home', path: '/' },
     { label: 'Projects', icon: 'build', path: '/projects' },
+    { label: 'Skills', icon: 'lightbulb', path: '/skills' },
   ];
 
   constructor(private router: Router) {}

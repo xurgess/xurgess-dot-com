@@ -1,11 +1,9 @@
 import { BigQuery } from '@google-cloud/bigquery';
 
-const bigquery = new BigQuery({ keyFilename: '' });
+const bigquery = new BigQuery({ keyFilename: 'red-airline-449200-a5-2177d9cb3bb5.json' });
 
 export const getSkills = async (req, res) => {
     try {
-        console.log(req)
-
         const sqlQuery = `SELECT * FROM XurgessDotCom.skills`;
 
         const options = {
