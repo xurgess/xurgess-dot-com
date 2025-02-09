@@ -1,0 +1,21 @@
+<div class="flex flex-row justify-center items-center gap-2 p-8">
+  @for (project of projects; track project) {
+    <mat-card
+      class="project-card gap-2"
+      (click)="navigateToProject(project.id)"
+    >
+      <mat-card-header>
+        <mat-card-title>{{ project.title }}</mat-card-title>
+      </mat-card-header>
+      <img
+        class="w-[80%] mx-auto rounded-lg"
+        mat-card-image
+        [src]="project.imageUrl"
+        alt="Project Image"
+      />
+      <mat-card-content>
+        <p>{{ project.description }}</p>
+      </mat-card-content>
+    </mat-card>
+  }
+</div>
