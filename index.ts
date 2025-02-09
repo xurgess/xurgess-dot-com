@@ -6,3 +6,6 @@ const port = 8080
 app.listen(port, () => {
     console.log(`Listening on port ${port}`)
 })
+
+import routes from './backend/routes.ts';
+app.use('/api', routes);
